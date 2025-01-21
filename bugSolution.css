@@ -1,0 +1,13 @@
+The solution is to ensure consistent units within the `calc()` function.  Using the same unit throughout the calculation avoids unexpected behavior. 
+
+```css
+/* bugSolution.css */
+.container {
+  width: 500px;
+}
+
+.element {
+  width: calc(500px - 50px); /* Consistent pixels */
+}
+```
+Alternatively, convert all values to a single unit before performing calculation inside `calc()`.
